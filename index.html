@@ -5,46 +5,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create a Personal Portfolio Website using HTML and CSS | Codehal</title>
+    <title>Madhan TM</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
 
-    <header>
-        <h2 class="logo"><span>M</span>adhan.</h2>
-        <nav class="navigation">
-            <i class="fa-solid fa-house"></i><a href="#">Home</a>
-            <i class="fa-solid fa-address-card"></i><a href="#">About</a>
-            <i class="fa-solid fa-blog"></i><a href="#">Blog</a>
-            <i class="fa-solid fa-phone"></i><a href="#">Contact</a>
+    <header class="py-5 px-10">
+        <h2 class="lg:text-4xl text-lg font-bold text-gray-500"><span class="font-bold text-purple-700">M</span>adhan.</h2>
+        <nav class="lg:block hidden navigation" id="nav-bar">
+            <i class="fa-solid fa-house pr-2"></i><a href="#">Home</a>
+            <i class="fa-solid fa-address-card pr-2"></i><a href="#">About</a>
+            <i class="fa-brands fa-github pr-2"></i><a href="#">Github</a>
+            <i class="fa-solid fa-phone pr-2"></i><a href="#">Contact</a>
         </nav>
-        <a href="mailto:madhantm06@gmail.com" class="btn-talk">Let's Talk</a>
+        <div id="mobile-menu" class="hidden absolute top-14 right-4 bg-purple-700 text-white w-40 rounded shadow-md">
+            <a href="#home" class="block px-4 py-2 hover:bg-gray-600"><i class="fa-solid fa-house pr-2"></i>Home</a>
+            <a href="#about" class="block px-4 py-2 hover:bg-gray-600"><i class="fa-solid fa-address-card pr-2"></i>About</a>
+            <a href="#services" class="block px-4 py-2 hover:bg-gray-600"><i class="fa-brands fa-github pr-2"></i>Github</a>
+            <a href="#contact" class="block px-4 py-2 hover:bg-gray-600"><i class="fa-solid fa-phone pr-2"></i>Contact</a>
+          </div>
+        <div>
+            <a href="mailto:madhantm06@gmail.com" class="text-white border border-purple-700 bg-purple-700 rounded-lg lg:text-2xl text-xs lg:px-8 px-4 py-1 hover:text-purple-700 hover:bg-white">Let's Talk</a>
+        <button class="p-0 m-2 lg:hidden" id="menu-btn"><i class="fa-solid fa-bars"></i></button>
+        </div>
     </header>
 
-    <section class="home">
-        <div style="display: flex;">
-            <div class="content">
-                <h2>Hi, I'm <span>MADHAN</span></h2>
-                <h4>Frontend Developer</h4>
-                <p>Engineering student at EGSPEC,Iam specialize develope attractive and user friendly web pages.</p>
-                <div class="btn-group">
-                    <a href="https://www.linkedin.com/in/madhan-tm" target="_blank">Hire Me</a>
-                    <a href="#">See Projects</a>
-                </div>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/madhan-tm?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/utthaman.madhan?igsh=N2ZtZjYxaW9xc2ph"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
+    <section id="home" class="lg:mx-24 m-16 lg:mt-60">
+        <div class="lg:flex flex-row-reverse gap-8">
             <div>
-                <img src="madhan.jpg" alt="madhan" id="home-img">
+                <img src="madhan.jpg" alt="madhan" id="home-img" class="lg:w-96 rounded-full w-40 mx-auto lg:m-0 my-5">
             </div>
+            <div id="content">
+                <h2 class="font-bold lg:text-6xl text-5xl lg:text-left text-center">Hi, I'm <span>MADHAN</span></h2>
+                <h4 class="lg:text-left text-center lg:text-5xl text-xl lg:pt-2 py-2">Frontend Developer</h4>
+                <p class="lg:text-xl text-xl lg:pt-2 lg:text-left text-center">Engineering student at EGSPEC,Iam specialize in developing attractive and user friendly web pages.</p>
+                <div class="text-white lg:block flex gap-4 justify-center mt-5">
+                    <a href="https://www.linkedin.com/in/madhan-tm" target="_blank" class="bg-purple-700 rounded-lg py-2 px-4 lg:text-2xl border border-purple-700 hover:text-purple-700 hover:bg-white text-sm">Hire Me</a>
+                    <a href="#" class="hover:bg-purple-700 hover:text-white text-purple-700 border border-purple-700 rounded-lg py-2 px-2 lg:text-2xl text-sm">See Projects</a>
+                </div>
+                <div class="lg:block flex mt-5 lg:mt-20 justify-center">
+                    <a href="https://www.linkedin.com/in/madhan-tm?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="text-white bg-purple-500 rounded-full py-2 px-4 m-2 hover:-translate-y-1 lg:text-3xl"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="" class="text-white bg-purple-500 rounded-full py-2 px-5 m-2 hover:-translate-y-1 lg:text-3xl"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/utthaman.madhan?igsh=N2ZtZjYxaW9xc2ph" class="text-white bg-purple-500 rounded-full py-2 px-4 m-2 hover:-translate-y-1 lg:text-3xl"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            
         </div> 
     </section>
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
 
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
 </body>
 
 </html>
